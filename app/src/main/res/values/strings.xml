@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidMobile0909</string>
+    <string name="Texto_Nome">Digite o seu nome</string>
+    <string name="Enviar_Nome">Confirmar</string>
+    <string name="Onde_Estou">Onde eu estou</string>
+    <string name="Latitude">Latitude</string>
+    <string name="Longetude">Longetude</string>
+</resources>
