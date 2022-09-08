@@ -5,4 +5,8 @@
     <string name="Onde_Estou">Onde eu estou</string>
     <string name="Latitude">Latitude</string>
     <string name="Longetude">Longetude</string>
+    <string name="Prosseguir">Clique para Prosseguir</string>
+    <string name="TirarFoto">Clique aqui para tirar uma foto</string>
+    <string name="SelecionarImagem">Clique aqui para selecionar uma Imagem</string>
+    <string name="Next">Ir para próxima tela</string>
 </resources>

@@ -6,12 +6,14 @@ import androidx.core.app.ActivityCompat;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
@@ -41,9 +43,14 @@ public class MainActivity extends AppCompatActivity{
         btnEnviarNome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                SharedPreferences prefs = getSharedPreferences("ChaveGeral", MODE_PRIVATE);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putString("ChaveNome", textNome.getText().toString());
+                editor.commit();
                 Intent intent = new Intent(MainActivity.this, MainActivitySensor.class);
-                intent.putExtra("Chave",textNome.getText().toString());
                 startActivity(intent);
+
             }
         });
 
