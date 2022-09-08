@@ -47,9 +47,8 @@ public class MainActivityCamera extends AppCompatActivity {
                 startActivityForResult(open_camera, CAPTURAR_IMAGEM);
             }
         });
+
     }
-
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
