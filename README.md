@@ -16,6 +16,6 @@ Projeto: Teste das funcionalidades do Telefone
   
   °Quarta Tela Teste de Camera e Armazenamento interno do dispositivo.
   
-  °Quinta Tela parabenização da conclusão do teste.
+  °Quinta Tela parabenização pela conclusão do teste.
   
   °Sexta Tela easter egg e créditos aos criadores.
