@@ -26,7 +26,7 @@
         android:id="@+id/btnEnviarNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="28dp"
         android:text="@string/Enviar_Nome"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +36,7 @@
         android:id="@+id/btnOndeEstou"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="148dp"
+        android:layout_marginBottom="100dp"
         android:onClick="buscarInformacoesGPS"
         android:text="@string/Onde_Estou"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,11 +45,13 @@
 
     <WebView
         android:id="@+id/webv"
-        android:layout_width="409dp"
-        android:layout_height="413dp"
+        android:layout_width="404dp"
+        android:layout_height="497dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.355" />
+        app:layout_constraintVertical_bias="0.324" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

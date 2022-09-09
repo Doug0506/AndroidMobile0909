@@ -9,4 +9,9 @@
     <string name="TirarFoto">Clique aqui para tirar uma foto</string>
     <string name="SelecionarImagem">Clique aqui para selecionar uma Imagem</string>
     <string name="Next">Ir para próxima tela</string>
+    <string name="Creditos">Créditos</string>
+    <string name="Douglas">Douglas dos Santos Melo</string>
+    <string name="Danilo">Danilo Mancini Queroz de Sousa</string>
+    <string name="Nome">Seu Nome</string>
+    <string name="Proposta">Teste aqui as funcionalidades do seu Celular</string>
 </resources>

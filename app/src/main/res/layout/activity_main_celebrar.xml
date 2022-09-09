@@ -2,47 +2,45 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/textNome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivitySensor">
+    tools:context=".MainActivityCelebrar">
 
     <TextView
-        android:id="@+id/sensorNome"
-        android:layout_width="348dp"
-        android:layout_height="71dp"
-        android:text=""
-        android:textSize="24sp"
+        android:id="@+id/textParabens"
+        android:layout_width="336dp"
+        android:layout_height="148dp"
+        android:text="@string/Nome"
+        android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintVertical_bias="0.107" />
 
     <Button
-        android:id="@+id/btnProsseguir"
-        android:layout_width="417dp"
-        android:layout_height="44dp"
-        android:text="@string/Prosseguir"
+        android:id="@+id/btnCreditos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Creditos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954" />
+        app:layout_constraintVertical_bias="0.956" />
 
     <ImageView
-        android:id="@+id/dado"
-        android:layout_width="298dp"
-        android:layout_height="475dp"
+        android:id="@+id/imageView5"
+        android:layout_width="406dp"
+        android:layout_height="573dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.664"
-        app:srcCompat="@drawable/lado1" />
-
+        app:layout_constraintVertical_bias="0.82"
+        app:srcCompat="@drawable/confete" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

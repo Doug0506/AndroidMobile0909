@@ -67,6 +67,10 @@ public class MainActivity extends AppCompatActivity{
             return;
         }
 
+        ActivityCompat.requestPermissions(MainActivity.this, new String[] {Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+        ActivityCompat.requestPermissions(MainActivity.this, new String[] {Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+        ActivityCompat.requestPermissions(MainActivity.this, new String[] {Manifest.permission.ACCESS_NETWORK_STATE}, 1);
+
         LocationManager  mLocManager  = (LocationManager) getSystemService(MainActivity.this.LOCATION_SERVICE);
         LocationListener mLocListener = new LocalizacaoListener();
 
@@ -77,7 +81,7 @@ public class MainActivity extends AppCompatActivity{
                     "Longitude: " + LocalizacaoListener.longitude + "\n";
             Toast.makeText(MainActivity.this, texto, Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(MainActivity.this, "GPS DESABILITADO.", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "GPS DESABILITADO.", Toast.LENGTH_SHORT).show();
         }
 
         this.mostrarGoogleMaps(LocalizacaoListener.latitude, LocalizacaoListener.longitude);

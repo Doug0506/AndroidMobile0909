@@ -20,7 +20,7 @@ public class MainActivityCamera extends AppCompatActivity {
 
     private static final int CAPTURAR_IMAGEM = 1;
     private Uri uri;
-    Button btnTirarFoto;
+    Button btnTirarFoto, btnNext;
     ImageView ImageFoto;
     TextView textNome;
 
@@ -33,6 +33,7 @@ public class MainActivityCamera extends AppCompatActivity {
 
         textNome = findViewById(R.id.textCamera);
         ImageFoto = findViewById(R.id.imageFoto);
+        btnNext = findViewById(R.id.btnNext);
         btnTirarFoto = findViewById(R.id.btnTirarFoto);
 
         String nome;
@@ -43,8 +44,16 @@ public class MainActivityCamera extends AppCompatActivity {
         btnTirarFoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent open_camera = new Intent (MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(open_camera, CAPTURAR_IMAGEM);
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent, CAPTURAR_IMAGEM);
+            }
+        });
+
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivityCamera.this,MainActivityCelebrar.class);
+                startActivity(intent);
             }
         });
 
@@ -54,22 +63,22 @@ public class MainActivityCamera extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        Bitmap photo = (Bitmap)data.getExtras().get("data");
-        ImageFoto.setImageBitmap(photo);
+        if (requestCode == CAPTURAR_IMAGEM) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            ImageFoto.setImageBitmap(imageBitmap);
+            adicionarNaGaleria();
+        }
 
         if (resultCode == Activity.RESULT_OK && requestCode == 123)
         {
             Uri imagemSelecionada = data.getData();
             ImageView imageView = new ImageView(this);
             imageView.setImageURI(imagemSelecionada);
-            ConstraintLayout cl = (ConstraintLayout) findViewById(R.id.constraint);
-            cl.addView(imageView);
+            ConstraintLayout cn = (ConstraintLayout) findViewById(R.id.constraint);
+            cn.addView(imageView);
         }
-    }
 
-
-    private void mostrarMensagem(String msg){
-        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
     }
 
     private void adicionarNaGaleria() {
